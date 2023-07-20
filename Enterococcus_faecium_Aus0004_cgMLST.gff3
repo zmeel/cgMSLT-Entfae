@@ -1,3 +1,5 @@
+##gff-version 3
+##sequence-region NC_017022.1 1 2954520	
 NC_017022.1	Prodigal:002006	CDS	1.0	1335.0	.	+	0	ID=EFAU004_00001;Name=dnaA;db_xref=COG:COG0593;gene=dnaA;inference=ab initio prediction:Prodigal:002006,similar to AA sequence:UniProtKB:P05648;locus_tag=EFAU004_00001;product=Chromosomal replication initiator protein DnaA
 NC_017022.1	Prodigal:002006	CDS	1533.0	2663.0	.	+	0	ID=EFAU004_00002;Name=dnaN;db_xref=COG:COG0592;gene=dnaN;inference=ab initio prediction:Prodigal:002006,similar to AA sequence:UniProtKB:P05649;locus_tag=EFAU004_00002;product=Beta sliding clamp
 NC_017022.1	Prodigal:002006	CDS	3121.0	4245.0	.	+	0	ID=EFAU004_00004;Name=recF_1;db_xref=COG:COG1195;gene=recF_1;inference=ab initio prediction:Prodigal:002006,similar to AA sequence:UniProtKB:Q8RDL3;locus_tag=EFAU004_00004;product=DNA replication and repair protein RecF
