@@ -1,0 +1,28 @@
+<tool id="vcf_filter" name="VCF Filter" version="1.0.0">
+    <description>Filter VCF file based on GFF3 file and skewness parameter</description>
+    <requirements>
+        <requirement type="package" version="3.7">python</requirement>
+    </requirements>
+    <command detect_errors="exit_code"><![CDATA[
+        python '$__tool_directory__/vcf_filter.py' 
+        --vcf '$input_vcf'
+        --gff3 '$input_gff3'
+        --skewness '$skewness'
+        --output '$output_vcf'
+    ]]></command>
+    <inputs>
+        <param type="data" name="input_vcf" format="vcf" label="Input VCF file"/>
+        <param type="data" name="input_gff3" format="gff3" label="Input GFF3 file"/>
+        <param type="float" name="skewness" value="0.25" label="Skewness parameter" help="The skewness parameter for filtering the VCF file. Adjust this to change the stringency of the filter."/>
+    </inputs>
+    <outputs>
+        <data name="output_vcf" format="vcf" label="Filtered VCF file"/>
+    </outputs>
+    <help><![CDATA[
+        **VCF Filter**
+
+        This tool filters a VCF file based on a GFF3 file and a skewness parameter.
+        It keeps only the entries in the VCF file that have a position present in the GFF3 file and where the FAF and RAF are skewed more than the specified skewness parameter.
+        It also adds the ID from the GFF3 file to the ID column of the VCF file.
+    ]]></help>
+</tool>
