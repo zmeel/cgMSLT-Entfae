@@ -38,8 +38,8 @@ To find the right sequence in this file use the ID from the table
 4	HGKNLNPO_00005	4242.0	6188.0	ATGACAGAAGAAAGAAGTTTAGTAGAACGCGCTAAAGAGTATGATG...
 ```
 ```
-ChatGPT: Now add to the table (as the second column with the name SeqSphere+ ID) the names of the sequences in Enterococcus_faecalis_cgMLST_scheme.ffn.fasta.
-To find the right sequence use the 60 bases from the table to search in Enterococcus_faecalis_cgMLST_scheme.ffn.fasta.
+ChatGPT: Now add to the table (as the second column with the name SeqSphere+ ID) the names of the sequences in Enterococcus_faecalis_cgMLST_scheme.fasta
+To find the right sequence use the 60 bases from the table to search in Enterococcus_faecalis_cgMLST_scheme.fasta.
 ```
 ```
 	ID	SeqSphere+ ID	start	end	sequence
@@ -82,5 +82,3 @@ Last but not least the all entries not belonging to the cgMLST scheme were filte
 ```
 ChatGPT: Filter out all entries that don't have an ID that starts with "EFAU004_"
 ```
-
-3) The table [filtered_sequences.csv](https://github.com/zmeel/cgMSLT-Entfae/blob/main/filtered_sequences.csv) was created by combining [Enterococcus_faecium_Aus0004.gff3](https://raw.githubusercontent.com/zmeel/cgMSLT-Entfae/main/Enterococcus_faecium_Aus0004.gff3), [Enterococcus_faecium_Aus0004.ffn.fasta](https://raw.githubusercontent.com/zmeel/cgMSLT-Entfae/main/Enterococcus_faecium_Aus0004.ffn.fasta) and [Enterococcus_faecium_cgMLST_scheme.fasta](https://github.com/zmeel/cgMSLT-Entfae/blob/main/Enterococcus_faecium_cgMLST_scheme.fasta)<br>
