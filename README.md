@@ -60,6 +60,27 @@ ChatGPT: Now filter the table and only keep the entries that have a SeqSphere+ I
 4	HGKNLNPO_00005	EFAU004_00005	4242.0	6188.0	ATGACAGAAGAAAGAAGTTTAGTAGAACGCGCTAAAGAGTATGATG...
 5	HGKNLNPO_00006	EFAU004_00006	6208.0	8679.0	ATGAGTGAAGAAATCAGAGAAAACATCCATGATGTCAATCTAACCA...
 ```
-
+filtered_sequences.csv was downloaded from ChatGPT and reuploaded and ChatGPT was asked to perform the following task:
+```
+ChatGPT: Replace entries in the first column of Enterococcus_faecium_Aus0004.gff3 with the SeqSphere+ ID (column 2) from filtered_sequences.csv.
+Use the ID (colum 1) from filtered_sequences.csv to find the right entry in Enterococcus_faecium_Aus0004.gff3.
+If an entry from Enterococcus_faecium_Aus0004.gff3 does not existst in filtered_sequences.csv then write this entry to a log file and count the total number of entries in this log file
+```
+ChatGPT made a mistake so I aksed to correct it:
+```
+I asked to replace the first column of Enterococcus_faecium_Aus0004.gff3 with the SeqSphere+ ID from filtered_sequences.csv.
+You replaced the ID tag. Please correct.
+```
+The result was still not what I asked but the result was sufficient:
+```
+NC_017022.1	Prodigal:002006	CDS	1.0	1335.0	.	+	0	ID=EFAU004_00001;Name=dnaA;db_xref=COG:COG0593;gene=dnaA;inference=ab initio prediction:Prodigal:002006,similar to AA sequence:UniProtKB:P05648;locus_tag=EFAU004_00001;product=Chromosomal replication initiator protein DnaA
+NC_017022.1	Prodigal:002006	CDS	1533.0	2663.0	.	+	0	ID=EFAU004_00002;Name=dnaN;db_xref=COG:COG0592;gene=dnaN;inference=ab initio prediction:Prodigal:002006,similar to AA sequence:UniProtKB:P05649;locus_tag=EFAU004_00002;product=Beta sliding clamp
+NC_017022.1	Prodigal:002006	CDS	3121.0	4245.0	.	+	0	ID=EFAU004_00004;Name=recF_1;db_xref=COG:COG1195;gene=recF_1;inference=ab initio prediction:Prodigal:002006,similar to AA sequence:UniProtKB:Q8RDL3;locus_tag=EFAU004_00004;product=DNA replication and repair protein RecF
+NC_017022.1	Prodigal:002006	CDS	4242.0	6188.0	.	+	0	ID=EFAU004_00005;eC_number=5.6.2.2;Name=gyrB;db_xref=COG:COG0187;gene=gyrB;inference=ab initio prediction:Prodigal:002006,similar to AA sequence:UniProtKB:Q839Z1;locus_tag=EFAU004_00005;product=DNA gyrase subunit B
+```
+Last but not least the all entries not belonging to the cgMLST scheme were filtered out:
+```
+ChatGPT: Filter out all entries that don't have an ID that starts with "EFAU004_"
+```
 
 3) The table [filtered_sequences.csv](https://github.com/zmeel/cgMSLT-Entfae/blob/main/filtered_sequences.csv) was created by combining [Enterococcus_faecium_Aus0004.gff3](https://raw.githubusercontent.com/zmeel/cgMSLT-Entfae/main/Enterococcus_faecium_Aus0004.gff3), [Enterococcus_faecium_Aus0004.ffn.fasta](https://raw.githubusercontent.com/zmeel/cgMSLT-Entfae/main/Enterococcus_faecium_Aus0004.ffn.fasta) and [Enterococcus_faecium_cgMLST_scheme.fasta](https://github.com/zmeel/cgMSLT-Entfae/blob/main/Enterococcus_faecium_cgMLST_scheme.fasta)<br>
