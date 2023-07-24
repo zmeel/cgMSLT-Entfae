@@ -1,0 +1,23 @@
+<tool id="vcf_and_fasta_updater" name="VCF and FASTA Updater" version="0.1.0">
+    <description>updates a VCF file and a FASTA file</description>
+    <requirements>
+        <requirement type="package" version="1.2.0">pandas</requirement>
+    </requirements>
+    <command detect_errors="exit_code"><![CDATA[
+        python '$__tool_directory__/vcf_and_fasta_updater.py' '$input1' '$input2' '$input3' '$output1' '$output2'
+    ]]></command>
+    <inputs>
+        <param type="data" name="input1" format="vcf" label="Input VCF file" />
+        <param type="data" name="input2" format="fasta" label="Input FASTA file (reference)" />
+        <param type="data" name="input3" format="fasta" label="Input FASTA file (to update)" />
+    </inputs>
+    <outputs>
+        <data name="output1" format="vcf" label="Updated VCF file" />
+        <data name="output2" format="fasta" label="Updated FASTA file" />
+    </outputs>
+    <help><![CDATA[
+        **What it does**
+
+        This tool updates a VCF file by adding extra columns based on a reference FASTA file. It also updates a second FASTA file by replacing the REF bases with the ALT bases at the specified positions in the VCF file.
+    ]]></help>
+</tool>
