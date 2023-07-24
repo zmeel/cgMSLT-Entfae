@@ -13,7 +13,7 @@
     <inputs>
         <param type="data" name="input_vcf" format="vcf" label="Input VCF file"/>
         <param type="data" name="input_gff3" format="gff3" label="Input GFF3 file"/>
-        <param type="float" name="skewness" value="0.25" label="Skewness parameter" help="The skewness parameter for filtering the VCF file. Adjust this to change the stringency of the filter."/>
+        <param type="float" name="skewness" value="0.6" label="Skewness parameter" help="The skewness parameter for filtering the VCF file. Adjust this to change the stringency of the filter."/>
     </inputs>
     <outputs>
         <data name="output_vcf" format="vcf" label="Filtered VCF file"/>
